@@ -31,7 +31,7 @@ done
 t=$(($t-1))
 for x in $(seq 1 $t)
 do
-	cat template_tmp | sed "s/${la[$x]}/${ra[$x]}/g" > template_t
+	cat template_tmp | sed "s/@${la[$x]}@/${ra[$x]}/g" > template_t
 	cp template_t template_tmp
 	rm template_t	
 done
